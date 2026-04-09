@@ -10,10 +10,15 @@ const buttons = document.getElementById("letter-buttons");
 const preloadImg = new Image();
 preloadImg.src = "cat_dance.gif";
 const finalText = document.getElementById("final-text");
+const music = document.getElementById("bg-music");
 
 // Click Envelope
 
 envelope.addEventListener("click", () => {
+    // Start the music!
+    music.play().catch(error => {
+        console.log("Autoplay was prevented, but will play after interaction.")
+    })
     envelope.style.display = "none";
     letter.style.display = "flex";
 
