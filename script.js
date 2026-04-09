@@ -62,6 +62,12 @@ noBtn.addEventListener("mouseover", () => {
 // YES is clicked
 
 yesBtn.addEventListener("click", () => {
+    confetti({
+  particleCount: 150,
+  spread: 70,
+  origin: { y: 0.6 }
+});
+
     title.textContent = "Yippeeee!";
 
     catImg.src = "cat_dance.gif";
